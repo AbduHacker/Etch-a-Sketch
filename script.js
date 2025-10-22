@@ -17,7 +17,6 @@ function createSquares(n) {
   }
   
 }
-createSquares(2);
 function changeColor() {
   container.addEventListener("mouseover", (event) => {
     let target = event.target;
@@ -27,5 +26,16 @@ function changeColor() {
     }
   });
 }
+
+function changeSize() {
+  let size = prompt("Enter the length of the squares(1 to 100): ");
+  container.innerHTML = "";
+  createSquares(size);
+}
+function clearColors() {
+  let sqaures = document.querySelectorAll(".square");
+  sqaures.forEach((item) => item.style.backgroundColor = "white");
+}
+createSquares(10);
 changeColor();
 
